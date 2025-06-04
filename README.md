@@ -1,39 +1,33 @@
+System Parkingowy – Projekt Java
+📋 Opis
+Projekt przedstawia obiektowy system parkingowy napisany w języku Java, który umożliwia:
 
-Interfejs obsługiwany jest przez konsolę – użytkownik wprowadza dane przez `Scanner`.
+rejestrację wjazdów i wyjazdów pojazdów,
 
----
+kontrolę dostępnych miejsc,
 
-## 💰 System opłat
+przesuwanie czasu symulacji,
 
-Opłaty są obliczane na podstawie dnia tygodnia oraz typu pojazdu:
+generowanie dziennego raportu,
 
-- **Dni robocze:** 2.30 zł/godzina,
-- **Weekend:** 4.30 zł/godzina,
-- **Samochody z więcej niż 8 miejscami:** dopłata 5 zł,
-- **Ciężarówki z dużą wysokością i niską ładownością:** dopłata 100 zł.
+przegląd historii parkowania.
 
----
+W projekcie zaimplementowano trzy typy pojazdów:
 
-## ⚠️ Obsługa wyjątków
+Samochód osobowy,
 
-System obsługuje i wyświetla błędy w przypadkach:
-- braku miejsc na parkingu,
-- błędnych lub pustych danych wejściowych,
-- próby dodania pojazdu o zduplikowanym numerze rejestracyjnym,
-- próby wyjazdu nieistniejącego pojazdu.
+Ciężarówka,
 
----
+Motocykl.
 
-## 🧪 Przykładowe testy manualne
+System bazuje na koncepcjach programowania obiektowego takich jak dziedziczenie, polimorfizm i enkapsulacja.
 
-1. Dodaj samochód z poprawnymi danymi.
-2. Dodaj motocykl z niepoprawnym typem (`skuter`) – sprawdź komunikat o błędzie.
-3. Przesuń czas o kilka godzin i zarejestruj wyjazd – sprawdź naliczoną opłatę.
-4. Wygeneruj raport dzienny i sprawdź listę zaparkowanych pojazdów.
+🧩 Struktura klas
+Pojazd (abstrakcyjna) – klasa bazowa z informacjami o pojeździe i metodami do obliczania opłat.
 
----
+Samochod, Ciezarowka, Motocykl – klasy dziedziczące, implementujące zachowanie specyficzne dla typu pojazdu.
 
-## 👥 Autorzy
+RejestrParkowania – klasa przechowująca informacje o czasie wjazdu/wyjazdu oraz opłacie.
 
-- Damian Sadowski – logika pojazdów i obsługa wyjątków
-- Paulina Chojnowska – raporty, historia, struktura systemu
+SystemParkingowy – główna klasa zarządzająca systemem i logiką aplikacji.
+
